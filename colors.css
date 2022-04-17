@@ -1,0 +1,153 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /* border: 1px solid black; */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: sans-serif;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+}
+
+header {
+    /* border-bottom: 1px solid grey; */
+    display: flex;
+    align-items: center;
+    padding: 25px 15px;
+}
+
+.brand {
+    /* border: 1px solid red; */
+    flex-basis: calc(50vw - 140px);
+}
+
+.menu {
+    /* border: 1px solid red; */
+    flex: 0 0 250px;
+}
+
+.cta {
+    /* border: 1px solid red; */
+    flex-basis: calc(50vw - 140px);
+    display: flex;
+    justify-content: flex-end;
+}
+
+.menu .flex-nav {
+    /* border: 1px solid black; */
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.cta a {
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 8px 20px;
+    font-size: 18px;
+}
+
+main {
+    /* border: 1px solid red; */
+    flex: 1;
+    display: flex;
+    align-items: center;
+    background: url('images/1.jpg') left no-repeat #9e74cee3;
+    background-size: cover;
+    background-blend-mode: multiply;
+    padding-left: 100px;
+}
+
+main .main-text {
+    /* border: 1px solid black; */
+    max-width: 600px;
+    color: #fea;
+    letter-spacing: 2px;
+}
+
+.main-text h1 {
+    margin-bottom: 25px;
+    font-weight: lighter;
+}
+
+.main-text :nth-child(2) {
+    margin-bottom: 15px;
+    line-height: 25px;
+}
+
+footer {
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 15px;
+}
+
+.rights {
+    /* border: 1px solid black; */
+}
+
+.icons {
+    /* border: 1px solid black; */
+}
+
+.icons .flex-icon {
+    list-style: none;
+    display: flex;
+}
+
+.flex-icon a {
+    font-size: 20px;
+    margin: 0 0 0 26px;
+}
+
+@media all and (max-width:768px) {
+    .brand, a, .rights {
+        font-size: 15px;
+    }
+
+    main {
+        padding-left: 25px;
+    }
+}
+
+@media all and (max-width:600px) {
+    header {
+        flex-wrap: wrap;
+    }
+
+    .menu {
+        order: 1;
+        margin-top: 25px;
+    }
+
+    .brand, .cta {
+        flex-basis: calc(50vw - 15px);
+    }
+
+    footer .icons {
+        order: -1;
+    }
+
+    .flex-icon a {
+        margin: 0 26px 0 0;
+    }
+
+    footer .rights {
+        flex-basis: 100%;
+        margin-top: 10px;
+    }
+
+    footer {
+        flex-wrap: wrap;
+        padding-bottom: 10px;
+    }
+}
